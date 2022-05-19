@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    --border-radius: 1.5rem;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-size: 70rem;
+    background-position: right 45vw bottom 55vh, left 44vw top 50vh;
+    background-repeat: no-repeat;
+    background-color: var(--dark-cyan);
+}
+
+/* Card */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 3.5rem 5rem .5rem rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    width: 86%;
+
+    background-color: white;
+
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+/* .main-info contains card background, profile pic, profile name/ age, city, and the border-bottom */
+.main-info {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 2.5rem;
+    border-bottom: .1rem solid hsla(0, 0%, 59%, .2);
+}
+
+.main-info img {
+    display: block;
+}
+
+.card-background {
+    margin-bottom: 7rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    width: 100%;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 7.5rem;
+
+    border: .5rem solid white;
+    border-radius: 6.5rem;
+}
+
+.main-info h1 {
+    margin-bottom: .6rem;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--dark-grayish-blue)
+}
+
+.main-info span {
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.main-info p {
+    margin-bottom: 2.4rem;
+    
+    font-size: 1.4rem;
+    color: var(--dark-grayish-blue);
+}
+
+/* Profile numbers row section */
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-right: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.column {
+    text-align: center;
+}
+
+.column h2 {
+    margin-bottom: .3rem;
+
+    font-size: 1.9rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.column p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    color: var(--dark-gray);
+}
+
+
+@media only screen and (min-width: 401px) {
+    body {
+        background-size: auto;
+        background-position: right 52vw bottom 33vh, left 48vw top 51vh;
+    }
+
+    main {
+        box-shadow: 0rem 4.5rem 5rem .5rem rgba(0, 0, 0, 0.15);
+        max-width: 340px;
+    }
+
+    .main-info {
+        margin-bottom: 2.2rem;
+    }
+
+    .profile-pic {
+        top: 8.2rem;
+
+        border-width: .6rem solid white;
+    }
+
+    .main-info p {
+        font-size: 1.3rem;
+    }
+
+    .row {
+        margin-bottom: 2.2rem;
+    }
+}
